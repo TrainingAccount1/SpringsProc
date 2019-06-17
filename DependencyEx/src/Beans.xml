@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns = "http://www.springframework.org/schema/beans"
+   xmlns:xsi = "http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation = "http://www.springframework.org/schema/beans
+   http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+   <bean id="text" class="com.pack.TextEditor">
+ <!--   <constructor-arg ref="spellcheckerword" ></constructor-arg>  using constructor for DI-->
+ <property name="word" ref="spellcheckerword"></property><!-- property attribute for using Setter method based DI -->
+</bean>
+   
+   <bean id="spellcheckerword" class="com.pack.SpellChecker">
+   <constructor-arg value="Hai"></constructor-arg>
+   </bean>
+   
+   </beans>
+   
